@@ -1,41 +1,29 @@
-import Image from 'next/image';
-import { cn } from '@/lib/utils';
-
-const clients = [
-  { name: 'Spectrum Analytics', logo: '/images/client1.svg' },
-  { name: 'TechVision Media', logo: '/images/client2.svg' },
-  { name: 'Horizon Marketing', logo: '/images/client3.svg' },
-  { name: 'Summit Solutions', logo: '/images/client4.svg' },
-  { name: 'Global Innovate', logo: '/images/client5.svg' },
-];
-
 export function ClientLogos() {
   return (
-    <div className="py-8">
-      <h2 className="text-center text-lg font-medium text-muted-foreground mb-10">
-        Сотрудничаем с лидерами рынка
-      </h2>
-      
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-12 justify-items-center items-center w-full max-w-5xl mx-auto px-4">
-        {clients.map((client, index) => (
-          <div 
-            key={index}
-            className={cn(
-              "w-full h-10 md:h-12 relative flex items-center justify-center",
-              "transition-all duration-300 grayscale hover:grayscale-0 opacity-70 hover:opacity-100"
-            )}
-          >
-            <Image
-              src={client.logo}
-              alt={client.name}
-              width={150}
-              height={40}
-              className="max-h-full w-auto object-contain"
-              unoptimized // SVG не требует оптимизации изображений
-            />
-          </div>
-        ))}
+    <section className="py-12 bg-muted/30">
+      <div className="container mx-auto px-4">
+        <h2 className="text-center text-lg font-medium text-muted-foreground mb-8">
+          Trusted By
+        </h2>
+        <div className="flex justify-center items-center space-x-12 opacity-75 grayscale">
+          {/* Placeholder for client logos - replace src with actual logo URLs */}
+          <img
+            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=150"
+            alt="Client Logo"
+            className="h-8 object-contain"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=150"
+            alt="Client Logo"
+            className="h-8 object-contain"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=150"
+            alt="Client Logo"
+            className="h-8 object-contain"
+          />
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

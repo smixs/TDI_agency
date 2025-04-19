@@ -4,8 +4,6 @@ import { ClientLogos } from '@/components/client-logos';
 import { MarketChallenge } from '@/components/market-challenge';
 import { AboutTDI } from '@/components/about-tdi';
 import { ServicesSection } from '@/components/services-section';
-import { TdiDifference } from '@/components/tdi-difference';
-import { GrowthJourney } from '@/components/growth-journey';
 import { ResultsSection } from '@/components/results-section';
 import { ContactInfo } from '@/components/contact-info';
 import { Footer } from '@/components/footer';
@@ -46,7 +44,6 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
             The TDI Difference
           </h2>
-          <TdiDifference />
         </div>
       </section>
       
@@ -55,7 +52,6 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
             Your Growth Journey, Simplified
           </h2>
-          <GrowthJourney />
         </div>
       </section>
       
