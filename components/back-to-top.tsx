@@ -47,7 +47,7 @@ export function BackToTop() {
         'transform hover:scale-110 active:scale-95',
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
       )}
-      aria-label="Прокрутить наверх"
+      aria-label="Scroll to top"
     >
       <ChevronUp 
         className={cn(

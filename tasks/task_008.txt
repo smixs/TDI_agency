@@ -1,6 +1,6 @@
 # Task ID: 8
 # Title: Footer and Animation Implementation
-# Status: pending
+# Status: done
 # Dependencies: 1, 2, 3, 4, 5, 6, 7
 # Priority: medium
 # Description: Create the footer component and add animations/interactivity throughout the site.
@@ -23,7 +23,7 @@ Create a footer component that includes: 1) Company logo (use the existing logo 
 ### Details:
 Add hover effects to all interactive elements including: 1) Navigation links, 2) Buttons (primary and secondary), 3) Service cards, 4) Process items, 5) Footer links and social icons. Use CSS transitions with duration between 0.3-0.5s and ease-out easing. For buttons, implement subtle scale (1.05) and shadow changes. For cards, add slight elevation effect. For links, use color transitions and possibly underline animations. Ensure all hover states provide clear visual feedback without being distracting.
 
-## 3. Implement Scroll-Based Animations [pending]
+## 3. Implement Scroll-Based Animations [done]
 ### Dependencies: 8.1, 8.2
 ### Description: Add entrance animations to page sections when they enter the viewport
 ### Details:

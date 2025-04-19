@@ -645,6 +645,7 @@ Can you show me the complexity report in a more readable format?
 ```
 
 
+
 ```
 TDI_agency
 ├─ .bolt
@@ -676,14 +677,13 @@ TDI_agency
 │  │     │  ├─ 4.pack.gz
 │  │     │  ├─ 5.pack.gz
 │  │     │  ├─ 6.pack.gz
+│  │     │  ├─ 7.pack.gz
+│  │     │  ├─ 8.pack.gz
 │  │     │  ├─ index.pack.gz
 │  │     │  └─ index.pack.gz.old
 │  │     └─ server-development
 │  │        ├─ 0.pack.gz
 │  │        ├─ 1.pack.gz
-│  │        ├─ 2.pack.gz
-│  │        ├─ 3.pack.gz
-│  │        ├─ 4.pack.gz
 │  │        ├─ index.pack.gz
 │  │        └─ index.pack.gz.old
 │  ├─ package.json
@@ -705,17 +705,18 @@ TDI_agency
 │  │  │  ├─ @radix-ui+primitive@1.1.2.js
 │  │  │  ├─ @radix-ui+react-compose-refs@1.1.2_@types+react@18.2.22_react@18.2.0.js
 │  │  │  ├─ @radix-ui+react-context@1.1.2_@types+react@18.2.22_react@18.2.0.js
-│  │  │  ├─ @radix-ui+react-dialog@1.1.7_@types+react-dom@18.2.7_@types+react@18.2.22_react-dom@18.2.0_react@18.2.0__react@18.2.0.js
-│  │  │  ├─ @radix-ui+react-dismissable-layer@1.1.6_@types+react-dom@18.2.7_@types+react@18.2.22_re_249aa7a5e2363f58c6d06fcb651df539.js
+│  │  │  ├─ @radix-ui+react-dialog@1.1.10_@types+react-dom@18.2.7_@types+react@18.2.22_react-dom@18.2.0_react@18.2.0__react@18.2.0.js
+│  │  │  ├─ @radix-ui+react-dismissable-layer@1.1.7_@types+react-dom@18.2.7_@types+react@18.2.22_re_9c2218fa26cd728fedbc3936242a964a.js
 │  │  │  ├─ @radix-ui+react-focus-guards@1.1.2_@types+react@18.2.22_react@18.2.0.js
-│  │  │  ├─ @radix-ui+react-focus-scope@1.1.3_@types+react-dom@18.2.7_@types+react@18.2.22_react-do_5c701bbf9493da8e70c09608d9963aa4.js
+│  │  │  ├─ @radix-ui+react-focus-scope@1.1.4_@types+react-dom@18.2.7_@types+react@18.2.22_react-do_2b18e49073786ae933ffe024906a1345.js
 │  │  │  ├─ @radix-ui+react-id@1.1.1_@types+react@18.2.22_react@18.2.0.js
-│  │  │  ├─ @radix-ui+react-portal@1.1.5_@types+react-dom@18.2.7_@types+react@18.2.22_react-dom@18.2.0_react@18.2.0__react@18.2.0.js
+│  │  │  ├─ @radix-ui+react-portal@1.1.6_@types+react-dom@18.2.7_@types+react@18.2.22_react-dom@18.2.0_react@18.2.0__react@18.2.0.js
 │  │  │  ├─ @radix-ui+react-presence@1.1.3_@types+react-dom@18.2.7_@types+react@18.2.22_react-dom@18.2.0_react@18.2.0__react@18.2.0.js
-│  │  │  ├─ @radix-ui+react-primitive@2.0.3_@types+react-dom@18.2.7_@types+react@18.2.22_react-dom@18.2.0_react@18.2.0__react@18.2.0.js
+│  │  │  ├─ @radix-ui+react-primitive@2.1.0_@types+react-dom@18.2.7_@types+react@18.2.22_react-dom@18.2.0_react@18.2.0__react@18.2.0.js
 │  │  │  ├─ @radix-ui+react-slot@1.2.0_@types+react@18.2.22_react@18.2.0.js
 │  │  │  ├─ @radix-ui+react-use-callback-ref@1.1.1_@types+react@18.2.22_react@18.2.0.js
-│  │  │  ├─ @radix-ui+react-use-controllable-state@1.1.1_@types+react@18.2.22_react@18.2.0.js
+│  │  │  ├─ @radix-ui+react-use-controllable-state@1.2.2_@types+react@18.2.22_react@18.2.0.js
+│  │  │  ├─ @radix-ui+react-use-effect-event@0.0.2_@types+react@18.2.22_react@18.2.0.js
 │  │  │  ├─ @radix-ui+react-use-escape-keydown@1.1.1_@types+react@18.2.22_react@18.2.0.js
 │  │  │  ├─ @radix-ui+react-use-layout-effect@1.1.1_@types+react@18.2.22_react@18.2.0.js
 │  │  │  ├─ @swc+helpers@0.5.2.js
@@ -723,8 +724,11 @@ TDI_agency
 │  │  │  ├─ class-variance-authority@0.7.1.js
 │  │  │  ├─ clsx@2.1.1.js
 │  │  │  ├─ detect-node-es@1.1.0.js
+│  │  │  ├─ framer-motion@12.7.4_react-dom@18.2.0_react@18.2.0__react@18.2.0.js
 │  │  │  ├─ get-nonce@1.0.1.js
 │  │  │  ├─ lucide-react@0.446.0_react@18.2.0.js
+│  │  │  ├─ motion-dom@12.7.4.js
+│  │  │  ├─ motion-utils@12.7.2.js
 │  │  │  ├─ next@13.5.1_react-dom@18.2.0_react@18.2.0__react@18.2.0.js
 │  │  │  ├─ react-remove-scroll-bar@2.3.8_@types+react@18.2.22_react@18.2.0.js
 │  │  │  ├─ react-remove-scroll@2.6.3_@types+react@18.2.22_react@18.2.0.js
@@ -758,17 +762,11 @@ TDI_agency
 │  │  │  ├─ a34f9d1faa5f3315-s.p.woff2
 │  │  │  └─ df0a9ae256c0569c-s.woff2
 │  │  └─ webpack
-│  │     ├─ 11349ce40aba2b4d.webpack.hot-update.json
-│  │     ├─ 2ec8039e7c695014.webpack.hot-update.json
+│  │     ├─ 24565e307e93fb67.webpack.hot-update.json
 │  │     ├─ 633457081244afec._.hot-update.json
-│  │     ├─ 9cdee6f272703e5c.webpack.hot-update.json
 │  │     ├─ app
-│  │     │  ├─ layout.11349ce40aba2b4d.hot-update.js
-│  │     │  ├─ layout.2ec8039e7c695014.hot-update.js
-│  │     │  └─ layout.9cdee6f272703e5c.hot-update.js
-│  │     ├─ webpack.11349ce40aba2b4d.hot-update.js
-│  │     ├─ webpack.2ec8039e7c695014.hot-update.js
-│  │     └─ webpack.9cdee6f272703e5c.hot-update.js
+│  │     │  └─ layout.24565e307e93fb67.hot-update.js
+│  │     └─ webpack.24565e307e93fb67.hot-update.js
 │  ├─ trace
 │  └─ types
 │     ├─ app
@@ -803,6 +801,7 @@ TDI_agency
 │     └─ page.tsx
 ├─ components
 │  ├─ about-tdi.tsx
+│  ├─ animate-on-scroll.tsx
 │  ├─ back-to-top.tsx
 │  ├─ client-logos.tsx
 │  ├─ contact-info.tsx
@@ -876,10 +875,6 @@ TDI_agency
 ├─ prd.md
 ├─ public
 │  └─ images
-│     ├─ client1.svg
-│     ├─ client2.svg
-│     ├─ client3.svg
-│     ├─ client4.svg
 │     ├─ hero-pattern.svg
 │     └─ tdi-logo.svg
 ├─ scripts
@@ -888,6 +883,17 @@ TDI_agency
 │  ├─ example_prd.txt
 │  └─ task-complexity-report.json
 ├─ tailwind.config.ts
+├─ tasks
+│  ├─ task_001.txt
+│  ├─ task_002.txt
+│  ├─ task_003.txt
+│  ├─ task_004.txt
+│  ├─ task_005.txt
+│  ├─ task_006.txt
+│  ├─ task_007.txt
+│  ├─ task_008.txt
+│  ├─ task_009.txt
+│  └─ task_010.txt
 └─ tsconfig.json
 
 ```
