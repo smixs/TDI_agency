@@ -11,7 +11,7 @@ Verify semantic HTML usage (single h1, proper h2/h3 hierarchy, semantic tags lik
 Run Lighthouse audits in Chrome DevTools. Verify HTML semantics with accessibility tools. Check image loading performance. Validate sitemap.xml and robots.txt. Test site with screen readers for accessibility.
 
 # Subtasks:
-## 1. Implement Semantic HTML Structure and Image Optimization [pending]
+## 1. Implement Semantic HTML Structure and Image Optimization [in-progress]
 ### Dependencies: None
 ### Description: Ensure proper HTML semantics and optimize all images for better performance and accessibility
 ### Details:
