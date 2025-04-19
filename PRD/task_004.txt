@@ -1,0 +1,31 @@
+# Task ID: 4
+# Title: Client Logos and Existing Components Polish
+# Status: pending
+# Dependencies: 1
+# Priority: medium
+# Description: Refine client logos section and polish existing Market Challenge and About TDI components.
+# Details:
+Insert real client/partner logos in SVG or optimized PNG format. Adjust logo sizing and spacing for mobile displays using flex-wrap or reduced visibility. For Market Challenge: improve typography for readability and consider adding subtle visual elements. For About TDI: implement two-column layout on desktop with text in one column and quality image in the other, refine text content and add subheading.
+
+# Test Strategy:
+Verify logos display correctly on all devices. Check image optimization. Test responsive layout changes between mobile and desktop. Validate typography improvements for readability.
+
+# Subtasks:
+## 1. Client Logos Section Implementation [pending]
+### Dependencies: None
+### Description: Add and optimize client/partner logos in the designated section with responsive behavior
+### Details:
+Source and implement real client/partner logos in SVG format (preferred) or optimized PNG. Create a container with appropriate spacing between logos. Implement responsive behavior using flex-wrap for smaller screens. Ensure logos maintain proper aspect ratios and have consistent visual weight. For mobile displays, either reduce the number of visible logos or scale them appropriately. Add hover effects if appropriate for the design language.
+
+## 2. Market Challenge Component Enhancement [pending]
+### Dependencies: None
+### Description: Improve the typography and visual elements of the Market Challenge section
+### Details:
+Review and enhance typography in the Market Challenge section by adjusting font sizes, line heights, and spacing for improved readability. Consider using a hierarchical type system with clear heading/body text distinction. Add subtle visual elements such as icons, dividers, or background patterns that reinforce the content without overwhelming it. Ensure the component maintains visual hierarchy and guides the user through the information effectively. Test readability across device sizes.
+
+## 3. About TDI Section Restructuring [pending]
+### Dependencies: None
+### Description: Implement two-column layout for About TDI section and refine content
+### Details:
+Restructure the About TDI section into a two-column layout for desktop views (text in one column, image in the other). Source or create a high-quality image that represents TDI appropriately. Refine existing text content for clarity and impact, adding a compelling subheading. Ensure the layout is responsive, reverting to a single column on mobile devices. Maintain proper spacing between elements and implement smooth transitions between viewport sizes. Consider adding subtle animations or transitions when the section comes into view.
+

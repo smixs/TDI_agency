@@ -1,0 +1,31 @@
+# Task ID: 6
+# Title: Why TDI and Process Sections
+# Status: done
+# Dependencies: 1
+# Priority: medium
+# Description: Implement the differentiators section and approach/process visualization.
+# Details:
+For Why TDI: Create section with heading "The TDI Difference". Implement list of 6 advantages with Icon, Title, and Short Description for each. Arrange in 2-3 columns using CSS Grid. For Process: Create section with heading "Your Growth Journey, Simplified". Visualize 4-step process using either numbered list with stylized numbers or horizontal/vertical timeline graphic. Focus on simplicity and clarity in design.
+
+# Test Strategy:
+Test responsive layout of both sections. Verify grid arrangement works on different screen sizes. Check icon alignment and spacing. Validate that process steps are clearly understood and visually distinct.
+
+# Subtasks:
+## 1. Implement 'The TDI Difference' section structure [done]
+### Dependencies: None
+### Description: Create the basic structure for the differentiators section with heading and prepare the CSS Grid layout for the advantages list
+### Details:
+Create a new section with the heading 'The TDI Difference'. Set up a container div for the advantages with CSS Grid layout configured for responsive design (2 columns on mobile, 3 columns on larger screens). Include appropriate spacing, background styling, and container width constraints consistent with the site's design system. Prepare empty placeholder elements for the 6 advantage items that will be populated in the next subtask.
+
+## 2. Implement the 6 TDI advantages with icons and content [done]
+### Dependencies: 6.1
+### Description: Create and style the 6 advantage items with their respective icons, titles, and descriptions
+### Details:
+For each of the 6 advantage items: 1) Select appropriate icons from the site's icon library, 2) Add titles and short descriptions for each advantage, 3) Style each item with consistent spacing, typography, and hover effects if applicable. The advantages should highlight TDI's unique value propositions. Ensure each item has proper semantic HTML structure and is accessible. Test the responsive behavior to ensure the grid layout works correctly at different breakpoints.
+
+## 3. Implement 'Your Growth Journey, Simplified' process visualization [done]
+### Dependencies: None
+### Description: Create and style the 4-step process visualization using either a timeline or stylized numbered list
+### Details:
+Create a new section with the heading 'Your Growth Journey, Simplified'. Implement a visual representation of the 4-step process using either: 1) A horizontal/vertical timeline with connecting elements between steps, or 2) A stylized numbered list with prominent step numbers. Each step should include a concise title and brief description. Ensure the visualization is responsive, maintains visual hierarchy, and guides the user's eye through the sequence. Focus on simplicity and clarity in the design, using appropriate spacing, colors, and typography to enhance readability.
+

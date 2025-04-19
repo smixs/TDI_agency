@@ -1,0 +1,40 @@
+# Task ID: 1
+# Title: Global Setup and Structure Configuration
+# Status: done
+# Dependencies: None
+# Priority: high
+# Description: Configure global styles, fonts, and page structure to establish the foundation for the landing page.
+# Details:
+Update metadata in app/layout.tsx with SEO-optimized title and description. Confirm Inter font usage or integrate TDI brand font. Add smooth scroll behavior in globals.css. Configure Tailwind (tailwind.config.ts) with TDI brand colors and appropriate border radius. Structure app/page.tsx with proper section tags, IDs for anchor links, consistent vertical padding, and alternating section backgrounds for visual rhythm.
+
+# Test Strategy:
+Verify metadata appears correctly in browser. Test smooth scrolling between sections. Check that global styles are applied consistently. Confirm Tailwind configuration works with custom colors. Validate page structure with proper section IDs and spacing.
+
+# Subtasks:
+## 1. Configure SEO Metadata and Font Setup [done]
+### Dependencies: None
+### Description: Update the app/layout.tsx file with SEO-optimized metadata and configure the appropriate font for the project.
+### Details:
+1. Open app/layout.tsx and update the metadata object with an SEO-friendly title (e.g., 'TDI - [Relevant Service/Product]') and description (150-160 characters describing the value proposition).
+2. Confirm the usage of Inter font or replace it with the TDI brand font by importing the appropriate font from next/font/google or adding a custom font file.
+3. Apply the font to the html element in the RootLayout component to ensure it's used throughout the application.
+
+## 2. Set Up Global Styles and Tailwind Configuration [done]
+### Dependencies: 1.1
+### Description: Configure global CSS styles and customize Tailwind with brand colors and design tokens.
+### Details:
+1. Update globals.css to add html { scroll-behavior: smooth; } for smooth scrolling to anchor links.
+2. Open tailwind.config.ts and extend the theme object to include TDI brand colors in the colors section (e.g., primary, secondary, accent).
+3. Configure appropriate border radius values in the borderRadius section of the theme extension.
+4. Add any other brand-specific design tokens like spacing, shadows, or typography settings that will be used throughout the site.
+
+## 3. Structure Main Page Layout with Sections [done]
+### Dependencies: 1.2
+### Description: Create the foundational structure for app/page.tsx with properly organized sections and consistent styling patterns.
+### Details:
+1. Set up app/page.tsx with a main container and distinct section tags for each major content area (hero, features, about, testimonials, etc.).
+2. Add unique IDs to each section (e.g., id="hero", id="features") to enable anchor link navigation.
+3. Implement consistent vertical padding for all sections using Tailwind classes (e.g., py-16 md:py-24).
+4. Create alternating background colors for adjacent sections using the configured brand colors (e.g., bg-white for even sections and bg-gray-50 or a light brand color for odd sections).
+5. Add basic responsive container constraints to ensure content is properly centered and has appropriate max-width.
+

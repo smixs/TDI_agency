@@ -1,0 +1,31 @@
+# Task ID: 2
+# Title: Header Component Enhancement
+# Status: pending
+# Dependencies: 1
+# Priority: high
+# Description: Improve the existing header component with logo, mobile menu, and polished scroll effects.
+# Details:
+Replace placeholder icon with real TDI Group SVG logo. Implement mobile menu using shadcn/ui Sheet component with burger icon from lucide-react. Add animation for Sheet appearance. Polish scroll styles with backdrop-blur and border effects. Ensure anchor links in navigation match section IDs. Test responsive behavior across all breakpoints.
+
+# Test Strategy:
+Test header on mobile, tablet, and desktop viewports. Verify mobile menu opens/closes correctly. Check that anchor links scroll to correct sections. Confirm scroll effects work properly. Validate logo appearance and sizing.
+
+# Subtasks:
+## 1. Implement TDI Group SVG Logo [pending]
+### Dependencies: None
+### Description: Replace the current placeholder icon with the real TDI Group SVG logo in the header component.
+### Details:
+Import the TDI Group SVG logo file into the project. Update the header component to replace the placeholder icon with the new SVG logo. Ensure the logo is properly sized and positioned for all viewport sizes. Add appropriate alt text for accessibility. Test the logo appearance across different screen sizes to ensure it scales properly.
+
+## 2. Create Mobile Menu with Sheet Component [pending]
+### Dependencies: 2.1
+### Description: Implement a responsive mobile menu using shadcn/ui Sheet component with a burger icon trigger.
+### Details:
+Import the Sheet component from shadcn/ui and the burger menu icon from lucide-react. Create a mobile menu that appears when the burger icon is clicked. Implement smooth animation for the Sheet appearance/disappearance. Ensure all navigation links are properly included in the mobile menu. Make sure the burger icon only appears on mobile breakpoints. Update anchor links in navigation to match the corresponding section IDs for proper scrolling behavior.
+
+## 3. Polish Header Scroll Effects [pending]
+### Dependencies: 2.1, 2.2
+### Description: Enhance the header with polished scroll effects including backdrop blur and border styling.
+### Details:
+Implement scroll event listener to detect page scrolling. Add backdrop-blur effect to the header when the user scrolls down. Implement subtle border effects that appear on scroll to visually separate the header from content. Ensure these effects work well across all device sizes. Test the scroll behavior thoroughly to ensure smooth transitions. Optimize the scroll event handling to prevent performance issues. Verify that all interactive elements remain accessible and functional with the new styling.
+
