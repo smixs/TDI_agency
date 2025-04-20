@@ -34,6 +34,16 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# Cursor AI related
+.bolt/
+.cursor/
+.cursorindexingignore
+.specstory/
+.windsurfrules
+/scripts/
+/tasks/
+prd.md
+
 # Added by Claude Task Master
 # Logs
 logs
@@ -53,7 +63,6 @@ node_modules/
 *.sw?
 # OS specific
 # Task files
-tasks.json
 tasks.json
 
 # Cursor secret file

@@ -14,9 +14,9 @@ export function MarketChallenge() {
           <AnimateOnScroll delay={0.2}>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Your MVP/MVE proves the concept. But in a crowded digital landscape,
-              visibility, user adoption, and monetization don't happen by chance. You
+              visibility, user adoption, and monetization don&apos;t happen by chance. You
               need more than just features; you need a narrative, a community, and a
-              smart plan to cut through the noise. Generic marketing won't cut it here.
+              smart plan to cut through the noise. Generic marketing won&apos;t cut it here.
             </p>
           </AnimateOnScroll>
         </div>

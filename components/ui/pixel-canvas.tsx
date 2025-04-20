@@ -281,27 +281,36 @@ class PixelCanvasElement extends HTMLElement {
   }
   
   connectedCallback() {
-    // Find parent element to attach listeners
-    const parentElement = this.parentNode as HTMLElement
+    // Start observing size changes
+    this.observer.observe(this)
     
-    if (parentElement) {
-      this.observer.observe(parentElement)
+    // Initialize pixels
+    this.handleResize()
+    
+    // Start animation
+    if (!this.requestId) {
+      this.lastTime = performance.now()
+      this.updatePixels(this.lastTime)
+    }
+    
+    // Bind events if not already bound
+    if (!this.eventsBound) {
       this.bindEvents()
-      this.handleResize()
-      this.animate(performance.now())
     }
   }
   
   disconnectedCallback() {
-    if (this.parentNode) {
-      this.observer.unobserve(this.parentNode as HTMLElement)
-      this.unbindEvents()
-    }
+    // Stop observing size changes
+    this.observer.unobserve(this)
     
+    // Stop animation
     if (this.requestId) {
       cancelAnimationFrame(this.requestId)
       this.requestId = null
     }
+    
+    // Unbind events
+    this.unbindEvents()
   }
   
   bindEvents() {
@@ -356,65 +365,62 @@ class PixelCanvasElement extends HTMLElement {
   }
   
   initializePixels() {
-    if (!this.ctx) return
-    
     this.pixels = []
+    const rect = this.getBoundingClientRect()
     
-    const width = this.canvas.width / (window.devicePixelRatio || 1)
-    const height = this.canvas.height / (window.devicePixelRatio || 1)
-    
-    if (width === 0 || height === 0) return
-    
-    // Calculate number of pixels based on gap
-    const pixelCount = this.variant === 'icon' 
-      ? Math.floor(Math.sqrt((width * height) / (this.gap * this.gap) / 4)) 
-      : Math.floor(Math.sqrt((width * height) / (this.gap * this.gap) / 2))
-    
-    for (let i = 0; i < pixelCount; i++) {
-      // Initialize pixels at the origin point
-      const color = this.colors[Math.floor(Math.random() * this.colors.length)]
-      let x, y
+    if (this.variant === 'icon') {
+      // For icon variant, create a cluster of pixels in the center
+      const centerX = rect.width / 2
+      const centerY = rect.height / 2
+      const radius = Math.min(rect.width, rect.height) / 4
       
-      if (this.variant === 'icon') {
-        // For icon variant, start from center
-        x = width / 2
-        y = height / 2
-      } else {
-        // For default variant, start from bottom left
-        x = 0
-        y = height
+      for (let i = 0; i < 50; i++) {
+        const angle = Math.random() * Math.PI * 2
+        const r = Math.random() * radius
+        const x = centerX + Math.cos(angle) * r
+        const y = centerY + Math.sin(angle) * r
+        const color = this.colors[Math.floor(Math.random() * this.colors.length)]
+        this.pixels.push(new Pixel(x, y, color))
       }
+    } else {
+      // For default variant, create a grid of pixels in the bottom-left corner
+      const size = 3
+      const totalWidth = size * this.gap
+      const totalHeight = size * this.gap
       
-      this.pixels.push(new Pixel(x, y, color))
+      for (let y = 0; y < size; y++) {
+        for (let x = 0; x < size; x++) {
+          const color = this.colors[Math.floor(Math.random() * this.colors.length)]
+          this.pixels.push(
+            new Pixel(x * this.gap, rect.height - (size - y) * this.gap, color)
+          )
+        }
+      }
+    }
+
+    if (!this.requestId) {
+      this.lastTime = performance.now()
+      this.updatePixels(this.lastTime)
     }
   }
   
-  animate(time: number) {
-    this.requestId = requestAnimationFrame(this.animate.bind(this))
-    
-    if (!this.ctx || this.pixels.length === 0) return
-    
-    // Calculate delta time in seconds
-    const deltaTime = (time - this.lastTime) / 1000
+  updatePixels = (time: number) => {
+    const deltaTime = Math.min((time - this.lastTime) / 1000, 0.1)
     this.lastTime = time
-    
+
+    if (!this.ctx) return
+
     // Clear canvas
-    const width = this.canvas.width / (window.devicePixelRatio || 1)
-    const height = this.canvas.height / (window.devicePixelRatio || 1)
-    this.ctx.clearRect(0, 0, width, height)
-    
+    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
+
     // Update and draw pixels
+    const rect = this.getBoundingClientRect()
     for (const pixel of this.pixels) {
-      pixel.update(
-        deltaTime, 
-        this.speed, 
-        width, 
-        height, 
-        this.isActive,
-        this.variant === 'icon'
-      )
-      pixel.draw(this.ctx, 2)
+      pixel.update(deltaTime, this.speed, rect.width, rect.height, this.isActive, this.variant === 'icon')
+      pixel.draw(this.ctx, 4)
     }
+
+    this.requestId = requestAnimationFrame(this.updatePixels)
   }
 }
 

@@ -12,7 +12,10 @@ import {
   TrendingUp,
   Video,
   BarChart3,
-  Users
+  Users,
+  ArrowRight,
+  Globe2,
+  Users2
 } from 'lucide-react';
 
 export function HeroGeometric() {
@@ -158,7 +161,7 @@ export function HeroGeometric() {
             custom={0}
           >
             Your Digital Product is Ready.{' '}
-            <span className="text-primary">Let's Make the Market Ready for It.</span>
+            <span className="text-primary">Let&apos;s Make the Market Ready for It.</span>
           </motion.h1>
           
           <motion.p 
@@ -168,7 +171,7 @@ export function HeroGeometric() {
             animate="visible"
             custom={1}
           >
-            You've built the core product. Now comes the critical part: winning users,
+            You&apos;ve built the core product. Now comes the critical part: winning users,
             building a brand, and driving real engagement. TDI Group specializes in
             crafting and executing powerful go-to-market strategies specifically for
             SaaS, apps, and marketplaces.
@@ -191,27 +194,43 @@ export function HeroGeometric() {
             ))}
           </motion.div>
 
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
+          >
+            <Button variant="default" size="lg">
+              Get Started
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+            <Button variant="outline" size="lg">
+              Learn More
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </motion.div>
+
           <motion.div 
             className="flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-6"
             variants={fadeUpVariants}
             initial="hidden"
             animate="visible"
-            custom={3}
+            custom={4}
           >
-            <Link href="#contact" className="w-full sm:w-auto">
-              <Button size="lg" className="w-full text-base font-medium py-6 sm:py-5">
-                Get Growth Strategy
-              </Button>
-            </Link>
-            <Link href="#approach" className="w-full sm:w-auto">
-              <Button
-                variant="outline"
-                size="lg"
-                className="w-full text-base font-medium py-6 sm:py-5"
-              >
-                See Our Approach
-              </Button>
-            </Link>
+            <Button 
+              size="lg" 
+              className="w-full sm:w-auto"
+            >
+              Book a Strategy Call
+            </Button>
+            
+            <Button
+              variant="outline"
+              size="lg"
+              className="w-full sm:w-auto"
+            >
+              View Case Studies
+            </Button>
           </motion.div>
         </div>
       </div>

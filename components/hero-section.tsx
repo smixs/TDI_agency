@@ -112,11 +112,11 @@ export function HeroSection() {
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 md:mb-6">
             Your Digital Product is Ready.{' '}
-            <span className="text-primary">Let's Make the Market Ready for It.</span>
+            <span className="text-primary">Let&apos;s Make the Market Ready for It.</span>
           </h1>
           
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 md:mb-12 leading-relaxed">
-            You've built the core product. Now comes the critical part: winning users,
+            You&apos;ve built the core product. Now comes the critical part: winning users,
             building a brand, and driving real engagement. TDI Group specializes in
             crafting and executing powerful go-to-market strategies specifically for
             SaaS, apps, and marketplaces.

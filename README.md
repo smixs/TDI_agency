@@ -897,3 +897,353 @@ TDI_agency
 └─ tsconfig.json
 
 ```
+```
+TDI_agency
+├─ .bolt
+│  ├─ config.json
+│  ├─ ignore
+│  └─ prompt
+├─ .cursor
+│  ├─ mcp.json
+│  └─ rules
+│     ├─ cursor_rules.mdc
+│     ├─ dev_workflow.mdc
+│     ├─ self_improve.mdc
+│     └─ taskmaster.mdc
+├─ .cursorindexingignore
+├─ .eslintrc.json
+├─ .next
+│  ├─ app-build-manifest.json
+│  ├─ build-manifest.json
+│  ├─ cache
+│  │  ├─ swc
+│  │  │  └─ plugins
+│  │  │     └─ v7_macos_aarch64_0.102.1
+│  │  └─ webpack
+│  │     ├─ client-development
+│  │     │  ├─ 0.pack.gz
+│  │     │  ├─ 1.pack.gz
+│  │     │  ├─ 10.pack.gz
+│  │     │  ├─ 11.pack.gz
+│  │     │  ├─ 12.pack.gz
+│  │     │  ├─ 2.pack.gz
+│  │     │  ├─ 3.pack.gz
+│  │     │  ├─ 4.pack.gz
+│  │     │  ├─ 5.pack.gz
+│  │     │  ├─ 6.pack.gz
+│  │     │  ├─ 7.pack.gz
+│  │     │  ├─ 8.pack.gz
+│  │     │  ├─ 9.pack.gz
+│  │     │  ├─ index.pack.gz
+│  │     │  └─ index.pack.gz.old
+│  │     ├─ client-development-fallback
+│  │     │  ├─ 0.pack.gz
+│  │     │  └─ index.pack.gz
+│  │     └─ server-development
+│  │        ├─ 0.pack.gz
+│  │        ├─ 1.pack.gz
+│  │        ├─ 10.pack.gz
+│  │        ├─ 11.pack.gz
+│  │        ├─ 12.pack.gz
+│  │        ├─ 2.pack.gz
+│  │        ├─ 3.pack.gz
+│  │        ├─ 4.pack.gz
+│  │        ├─ 5.pack.gz
+│  │        ├─ 6.pack.gz
+│  │        ├─ 7.pack.gz
+│  │        ├─ 8.pack.gz
+│  │        ├─ 9.pack.gz
+│  │        ├─ index.pack.gz
+│  │        └─ index.pack.gz.old
+│  ├─ fallback-build-manifest.json
+│  ├─ package.json
+│  ├─ react-loadable-manifest.json
+│  ├─ server
+│  │  ├─ _error.js
+│  │  ├─ _ssr_components_ui_pixel-canvas_tsx.js
+│  │  ├─ app
+│  │  │  ├─ _not-found_client-reference-manifest.js
+│  │  │  ├─ not-found.js
+│  │  │  ├─ not-found_client-reference-manifest.js
+│  │  │  ├─ page.js
+│  │  │  └─ page_client-reference-manifest.js
+│  │  ├─ app-paths-manifest.json
+│  │  ├─ middleware-build-manifest.js
+│  │  ├─ middleware-manifest.json
+│  │  ├─ middleware-react-loadable-manifest.js
+│  │  ├─ next-font-manifest.js
+│  │  ├─ next-font-manifest.json
+│  │  ├─ pages
+│  │  │  ├─ _app.js
+│  │  │  ├─ _document.js
+│  │  │  └─ _error.js
+│  │  ├─ pages-manifest.json
+│  │  ├─ server-reference-manifest.js
+│  │  ├─ server-reference-manifest.json
+│  │  ├─ vendor-chunks
+│  │  │  ├─ @radix-ui+primitive@1.1.2.js
+│  │  │  ├─ @radix-ui+react-compose-refs@1.1.2_@types+react@18.2.22_react@18.2.0.js
+│  │  │  ├─ @radix-ui+react-context@1.1.2_@types+react@18.2.22_react@18.2.0.js
+│  │  │  ├─ @radix-ui+react-dialog@1.1.10_@types+react-dom@18.2.7_@types+react@18.2.22_react-dom@18.2.0_react@18.2.0__react@18.2.0.js
+│  │  │  ├─ @radix-ui+react-dismissable-layer@1.1.7_@types+react-dom@18.2.7_@types+react@18.2.22_re_9c2218fa26cd728fedbc3936242a964a.js
+│  │  │  ├─ @radix-ui+react-focus-guards@1.1.2_@types+react@18.2.22_react@18.2.0.js
+│  │  │  ├─ @radix-ui+react-focus-scope@1.1.4_@types+react-dom@18.2.7_@types+react@18.2.22_react-do_2b18e49073786ae933ffe024906a1345.js
+│  │  │  ├─ @radix-ui+react-id@1.1.1_@types+react@18.2.22_react@18.2.0.js
+│  │  │  ├─ @radix-ui+react-portal@1.1.6_@types+react-dom@18.2.7_@types+react@18.2.22_react-dom@18.2.0_react@18.2.0__react@18.2.0.js
+│  │  │  ├─ @radix-ui+react-presence@1.1.3_@types+react-dom@18.2.7_@types+react@18.2.22_react-dom@18.2.0_react@18.2.0__react@18.2.0.js
+│  │  │  ├─ @radix-ui+react-primitive@2.1.0_@types+react-dom@18.2.7_@types+react@18.2.22_react-dom@18.2.0_react@18.2.0__react@18.2.0.js
+│  │  │  ├─ @radix-ui+react-slot@1.2.0_@types+react@18.2.22_react@18.2.0.js
+│  │  │  ├─ @radix-ui+react-use-callback-ref@1.1.1_@types+react@18.2.22_react@18.2.0.js
+│  │  │  ├─ @radix-ui+react-use-controllable-state@1.2.2_@types+react@18.2.22_react@18.2.0.js
+│  │  │  ├─ @radix-ui+react-use-effect-event@0.0.2_@types+react@18.2.22_react@18.2.0.js
+│  │  │  ├─ @radix-ui+react-use-escape-keydown@1.1.1_@types+react@18.2.22_react@18.2.0.js
+│  │  │  ├─ @radix-ui+react-use-layout-effect@1.1.1_@types+react@18.2.22_react@18.2.0.js
+│  │  │  ├─ @swc+helpers@0.5.2.js
+│  │  │  ├─ aria-hidden@1.2.4.js
+│  │  │  ├─ class-variance-authority@0.7.1.js
+│  │  │  ├─ clsx@2.1.1.js
+│  │  │  ├─ detect-node-es@1.1.0.js
+│  │  │  ├─ framer-motion@12.7.4_react-dom@18.2.0_react@18.2.0__react@18.2.0.js
+│  │  │  ├─ get-nonce@1.0.1.js
+│  │  │  ├─ lucide-react@0.446.0_react@18.2.0.js
+│  │  │  ├─ motion-dom@12.7.4.js
+│  │  │  ├─ motion-utils@12.7.2.js
+│  │  │  ├─ next@13.5.1_react-dom@18.2.0_react@18.2.0__react@18.2.0.js
+│  │  │  ├─ react-remove-scroll-bar@2.3.8_@types+react@18.2.22_react@18.2.0.js
+│  │  │  ├─ react-remove-scroll@2.6.3_@types+react@18.2.22_react@18.2.0.js
+│  │  │  ├─ react-style-singleton@2.2.3_@types+react@18.2.22_react@18.2.0.js
+│  │  │  ├─ tailwind-merge@2.6.0.js
+│  │  │  ├─ tslib@2.8.1.js
+│  │  │  ├─ use-callback-ref@1.3.3_@types+react@18.2.22_react@18.2.0.js
+│  │  │  └─ use-sidecar@1.1.3_@types+react@18.2.22_react@18.2.0.js
+│  │  └─ webpack-runtime.js
+│  ├─ static
+│  │  ├─ chunks
+│  │  │  ├─ _app-pages-browser_components_ui_pixel-canvas_tsx.js
+│  │  │  ├─ _error.js
+│  │  │  ├─ app
+│  │  │  │  ├─ layout.js
+│  │  │  │  ├─ not-found.js
+│  │  │  │  └─ page.js
+│  │  │  ├─ app-pages-internals.js
+│  │  │  ├─ fallback
+│  │  │  │  ├─ amp.js
+│  │  │  │  ├─ main.js
+│  │  │  │  ├─ pages
+│  │  │  │  │  ├─ _app.js
+│  │  │  │  │  └─ _error.js
+│  │  │  │  ├─ react-refresh.js
+│  │  │  │  └─ webpack.js
+│  │  │  ├─ main-app.js
+│  │  │  ├─ main.js
+│  │  │  ├─ pages
+│  │  │  │  ├─ _app.js
+│  │  │  │  └─ _error.js
+│  │  │  ├─ polyfills.js
+│  │  │  ├─ react-refresh.js
+│  │  │  └─ webpack.js
+│  │  ├─ css
+│  │  │  └─ app
+│  │  │     └─ layout.css
+│  │  ├─ development
+│  │  │  ├─ _buildManifest.js
+│  │  │  └─ _ssgManifest.js
+│  │  ├─ media
+│  │  │  ├─ 26a46d62cd723877-s.woff2
+│  │  │  ├─ 55c55f0601d81cf3-s.woff2
+│  │  │  ├─ 581909926a08bbc8-s.woff2
+│  │  │  ├─ 6d93bde91c0c2823-s.woff2
+│  │  │  ├─ 97e0cb1ae144a2a9-s.woff2
+│  │  │  ├─ a34f9d1faa5f3315-s.p.woff2
+│  │  │  └─ df0a9ae256c0569c-s.woff2
+│  │  └─ webpack
+│  │     ├─ 084b0545f5550429.webpack.hot-update.json
+│  │     ├─ 0a7650fd3aded61d.webpack.hot-update.json
+│  │     ├─ 168e9ab149abeeb4.webpack.hot-update.json
+│  │     ├─ 2e62eb862bde1af7.webpack.hot-update.json
+│  │     ├─ 3606c55c1a0be7d8.webpack.hot-update.json
+│  │     ├─ 633457081244afec._.hot-update.json
+│  │     ├─ 7017f576eaa6800e.webpack.hot-update.json
+│  │     ├─ 7579b88e9af66e86.webpack.hot-update.json
+│  │     ├─ 8f067d15fb89298b.webpack.hot-update.json
+│  │     ├─ _app-pages-browser_components_ui_pixel-canvas_tsx.3606c55c1a0be7d8.hot-update.js
+│  │     ├─ a87f8f18451f9fe0.webpack.hot-update.json
+│  │     ├─ app
+│  │     │  ├─ layout.084b0545f5550429.hot-update.js
+│  │     │  ├─ layout.0a7650fd3aded61d.hot-update.js
+│  │     │  ├─ layout.168e9ab149abeeb4.hot-update.js
+│  │     │  ├─ layout.2e62eb862bde1af7.hot-update.js
+│  │     │  ├─ layout.3606c55c1a0be7d8.hot-update.js
+│  │     │  ├─ layout.7017f576eaa6800e.hot-update.js
+│  │     │  ├─ layout.7579b88e9af66e86.hot-update.js
+│  │     │  ├─ layout.a87f8f18451f9fe0.hot-update.js
+│  │     │  ├─ layout.c3b81223a56faaf2.hot-update.js
+│  │     │  ├─ layout.c7fbe99f316b09a9.hot-update.js
+│  │     │  ├─ layout.ca6c62cc74a1dbfa.hot-update.js
+│  │     │  └─ page.3606c55c1a0be7d8.hot-update.js
+│  │     ├─ c3b81223a56faaf2.webpack.hot-update.json
+│  │     ├─ c7fbe99f316b09a9.webpack.hot-update.json
+│  │     ├─ ca6c62cc74a1dbfa.webpack.hot-update.json
+│  │     ├─ de66e70f9251a3ad.webpack.hot-update.json
+│  │     ├─ webpack.084b0545f5550429.hot-update.js
+│  │     ├─ webpack.0a7650fd3aded61d.hot-update.js
+│  │     ├─ webpack.168e9ab149abeeb4.hot-update.js
+│  │     ├─ webpack.2e62eb862bde1af7.hot-update.js
+│  │     ├─ webpack.3606c55c1a0be7d8.hot-update.js
+│  │     ├─ webpack.7017f576eaa6800e.hot-update.js
+│  │     ├─ webpack.7579b88e9af66e86.hot-update.js
+│  │     ├─ webpack.8f067d15fb89298b.hot-update.js
+│  │     ├─ webpack.a87f8f18451f9fe0.hot-update.js
+│  │     ├─ webpack.c3b81223a56faaf2.hot-update.js
+│  │     ├─ webpack.c7fbe99f316b09a9.hot-update.js
+│  │     ├─ webpack.ca6c62cc74a1dbfa.hot-update.js
+│  │     └─ webpack.de66e70f9251a3ad.hot-update.js
+│  ├─ trace
+│  └─ types
+│     ├─ app
+│     │  ├─ layout.ts
+│     │  └─ page.ts
+│     └─ package.json
+├─ .specstory
+│  ├─ .what-is-this.md
+│  └─ history
+│     ├─ 2025-04-13_09-17-анализ-задач-с-помощью-mcp.md
+│     ├─ 2025-04-14_01-35-создание-адаптивного-футера-для-проекта.md
+│     ├─ 2025-04-19_07-31-обзор-задач-и-план-действий-по-проекту.md
+│     ├─ 2025-04-19_08-21-обновление-цветовой-палитры-для-tdi-group.md
+│     ├─ 2025-04-20_03-49-implementing-dynamic-hero-section-with-animation.md
+│     ├─ 2025-04-20_04-23-оптимизация-дизайна-сайта-с-акцентными-элементами.md
+│     └─ 2025-04-20_04-50-интеграция-анимации-пикселей-в-servicecard.md
+├─ .windsurfrules
+├─ PRD
+│  ├─ task_001.txt
+│  ├─ task_002.txt
+│  ├─ task_003.txt
+│  ├─ task_004.txt
+│  ├─ task_005.txt
+│  ├─ task_006.txt
+│  ├─ task_007.txt
+│  ├─ task_008.txt
+│  ├─ task_009.txt
+│  └─ task_010.txt
+├─ README.md
+├─ app
+│  ├─ globals.css
+│  ├─ layout.tsx
+│  ├─ page.tsx
+│  ├─ privacy-policy
+│  │  └─ page.tsx
+│  └─ terms-of-service
+│     └─ page.tsx
+├─ components
+│  ├─ about-tdi.tsx
+│  ├─ animate-on-scroll.tsx
+│  ├─ back-to-top.tsx
+│  ├─ client-logos.tsx
+│  ├─ contact-info.tsx
+│  ├─ feature-card.tsx
+│  ├─ footer.tsx
+│  ├─ header.tsx
+│  ├─ hero-geometric.tsx
+│  ├─ hero-section.tsx
+│  ├─ market-challenge.tsx
+│  ├─ our-process.tsx
+│  ├─ results-section.tsx
+│  ├─ section-title.tsx
+│  ├─ service-card.tsx
+│  ├─ services-grid.tsx
+│  ├─ services-section.tsx
+│  ├─ ui
+│  │  ├─ accordion.tsx
+│  │  ├─ alert-dialog.tsx
+│  │  ├─ alert.tsx
+│  │  ├─ aspect-ratio.tsx
+│  │  ├─ avatar.tsx
+│  │  ├─ badge.tsx
+│  │  ├─ breadcrumb.tsx
+│  │  ├─ button.tsx
+│  │  ├─ calendar.tsx
+│  │  ├─ card.tsx
+│  │  ├─ carousel.tsx
+│  │  ├─ chart.tsx
+│  │  ├─ checkbox.tsx
+│  │  ├─ collapsible.tsx
+│  │  ├─ command.tsx
+│  │  ├─ context-menu.tsx
+│  │  ├─ dialog.tsx
+│  │  ├─ drawer.tsx
+│  │  ├─ dropdown-menu.tsx
+│  │  ├─ elegant-shape.tsx
+│  │  ├─ form.tsx
+│  │  ├─ hover-card.tsx
+│  │  ├─ input-otp.tsx
+│  │  ├─ input.tsx
+│  │  ├─ label.tsx
+│  │  ├─ menubar.tsx
+│  │  ├─ navigation-menu.tsx
+│  │  ├─ pagination.tsx
+│  │  ├─ pixel-canvas.tsx
+│  │  ├─ popover.tsx
+│  │  ├─ progress.tsx
+│  │  ├─ radio-group.tsx
+│  │  ├─ resizable.tsx
+│  │  ├─ scroll-area.tsx
+│  │  ├─ select.tsx
+│  │  ├─ separator.tsx
+│  │  ├─ sheet.tsx
+│  │  ├─ skeleton.tsx
+│  │  ├─ slider.tsx
+│  │  ├─ sonner.tsx
+│  │  ├─ switch.tsx
+│  │  ├─ table.tsx
+│  │  ├─ tabs.tsx
+│  │  ├─ textarea.tsx
+│  │  ├─ toast.tsx
+│  │  ├─ toaster.tsx
+│  │  ├─ toggle-group.tsx
+│  │  ├─ toggle.tsx
+│  │  └─ tooltip.tsx
+│  └─ why-tdi.tsx
+├─ components.json
+├─ hooks
+│  └─ use-toast.ts
+├─ lib
+│  └─ utils.ts
+├─ next.config.cjs
+├─ package-lock.json
+├─ package.json
+├─ pnpm-lock.yaml
+├─ postcss.config.cjs
+├─ prd.md
+├─ public
+│  ├─ images
+│  │  ├─ clients
+│  │  │  ├─ airbnb-logo.svg
+│  │  │  ├─ amazon-logo.svg
+│  │  │  ├─ dropbox-logo.svg
+│  │  │  ├─ shopify-logo.svg
+│  │  │  └─ slack-logo.svg
+│  │  ├─ hero-pattern.svg
+│  │  └─ tdi-logo.svg
+│  ├─ robots.txt
+│  └─ sitemap.xml
+├─ scripts
+│  ├─ README.md
+│  ├─ dev.js
+│  ├─ example_prd.txt
+│  └─ task-complexity-report.json
+├─ tailwind.config.ts
+├─ tasks
+│  ├─ task_001.txt
+│  ├─ task_002.txt
+│  ├─ task_003.txt
+│  ├─ task_004.txt
+│  ├─ task_005.txt
+│  ├─ task_006.txt
+│  ├─ task_007.txt
+│  ├─ task_008.txt
+│  ├─ task_009.txt
+│  └─ task_010.txt
+└─ tsconfig.json
+
+```

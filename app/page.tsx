@@ -1,6 +1,6 @@
 import { Header } from '@/components/header';
 import { HeroSection } from '@/components/hero-section';
-import { ClientLogos } from '@/components/client-logos';
+{/* import { ClientLogos } from '@/components/client-logos'; */}
 import { MarketChallenge } from '@/components/market-challenge';
 import { AboutTDI } from '@/components/about-tdi';
 import { ServicesSection } from '@/components/services-section';
@@ -20,6 +20,7 @@ export default function Home() {
       
       <HeroSection />
       
+      {/* 
       <section id="clients" className="py-12 md:py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <AnimateOnScroll>
@@ -27,6 +28,7 @@ export default function Home() {
           </AnimateOnScroll>
         </div>
       </section>
+      */}
       
       <section id="challenge" className="py-16 md:py-24 lg:py-32 bg-background">
         <div className="container mx-auto px-4">

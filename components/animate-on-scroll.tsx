@@ -56,7 +56,7 @@ export function AnimateOnScroll({
   
   // triggerOnce: true - анимация сработает один раз
   const isInView = useInView(ref, { 
-    triggerOnce: once, 
+    once, 
     amount: amount,
   });
 
