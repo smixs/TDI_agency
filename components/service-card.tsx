@@ -27,9 +27,9 @@ export function ServiceCard({ icon: Icon, title, description, tags, className }:
     >
       {/* Pixel Canvas эффект */}
       <PixelCanvas
-        gap={12}
-        speed={20}
-        colors={['hsl(var(--primary))', 'hsl(var(--accent))', 'hsl(var(--foreground))', 'hsl(var(--secondary-foreground))']}
+        gap={2}
+        speed={30}
+        colors={['#FFFF00']}
         variant="default"
         noFocus={false}
       />
