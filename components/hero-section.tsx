@@ -8,19 +8,12 @@ import Image from 'next/image'; // <-- Импортируем Image
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import {
-  TrendingUp,
-  Target,
-  LineChart,
-  Clock,
-  Users,
-  BarChart3,
   MoveRight,
   PhoneCall
 } from 'lucide-react';
-import { FeatureCard } from '@/components/feature-card';
 
 // Массив типов продуктов для анимированной смены
-const PRODUCT_TYPES = ["MVP", "SaaS", "App", "Marketplace"];
+const PRODUCT_TYPES = ["Product", "Service", "Application", "Marketplace", "Platform"];
 
 export function HeroSection() {
   const [scrollY, setScrollY] = useState(0);
@@ -54,30 +47,6 @@ export function HeroSection() {
 
     return () => clearInterval(intervalId);
   }, [PRODUCT_TYPES.length]);
-
-
-  const features = [
-    {
-      icon: TrendingUp,
-      title: '+300% Growth',
-      description: 'Average user growth in 6 months'
-    },
-    {
-      icon: Target,
-      title: '-42% CAC',
-      description: 'Reduced customer acquisition cost'
-    },
-    {
-      icon: LineChart,
-      title: 'Weekly Reports',
-      description: 'Transparent performance tracking'
-    },
-    {
-      icon: Clock,
-      title: '90 Days',
-      description: 'From strategy to market launch'
-    },
-  ];
 
   return (
     <section
@@ -182,18 +151,6 @@ export function HeroSection() {
             <br />
             We turn validated tech into revenue-generating businesses fast.
           </p>
-
-          {/* Карточки с фичами (существующий код) - центрируем контейнер */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-12 mx-auto max-w-md md:max-w-none"> {/* Added mx-auto max-w-md to center grid on small screens */}
-            {features.map((feature, index) => (
-              <FeatureCard
-                key={index}
-                icon={feature.icon}
-                title={feature.title}
-                description={feature.description}
-              />
-            ))}
-          </div>
 
           {/* Кнопки CTA (существующий код, адаптируем текст и иконки) - центрируем контейнер */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-6"> {/* justify-center centers buttons */}
