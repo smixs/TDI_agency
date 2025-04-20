@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import defaultTheme from 'tailwindcss/defaultTheme';
 
 const config: Config = {
   darkMode: ['class'],
@@ -9,6 +10,13 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-space-grotesk)', ...defaultTheme.fontFamily.sans],
+      },
+      fontSize: {
+        'hero-heading': ['3.5rem', { lineHeight: '1.2', letterSpacing: '-0.02em' }],
+        'hero-subheading': ['1.25rem', { lineHeight: '1.6' }],
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

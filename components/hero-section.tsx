@@ -1,7 +1,10 @@
+// File: /Users/xshima/Projects/TDI_agency/components/hero-section.tsx
+
 'use client';
 
 import { useEffect, useState, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image'; // <-- Импортируем Image
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import {
@@ -127,17 +130,19 @@ export function HeroSection() {
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="max-w-3xl mx-auto"> {/* Removed text-center here */}
           {/* H1 - теперь выравнивает свой контент по левому краю */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 md:mb-6 leading-tight text-left"> {/* Added text-left here */}
-            {/* Первая строка: "Launch Your [Animated Word]" - Используем flexbox для выравнивания элементов строки */}
-            <span className="inline-flex items-center text-white"> {/* inline-flex для строки, items-center для вертикального выравнивания по центру */}
-              <span className="inline">Launch Your{' '}</span> {/* Статичный текст. inline по умолчанию, пробел в конце */}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 md:mb-6 leading-tight text-center"> {/* Added text-center here */}
+            {/* Первая строка: "Your [Animated Word]" - Используем flexbox для выравнивания элементов строки */}
+            <span className="inline-flex items-baseline text-white"> {/* inline-flex для строки, items-baseline для выравнивания текста */}
+              <span className="inline">Fuel Your{' '}</span> {/* Статичный текст. inline по умолчанию, пробел в конце */}
               {/* Контейнер для динамического слова - flex item внутри inline-flex */}
               {/* КРИТИЧНО: Точная высота, достаточная minWidth, overflow-hidden, выравнивание по левому краю внутри контейнера */}
               <span
-                className="relative inline-flex items-center overflow-hidden whitespace-nowrap text-primary font-semibold ml-4" // inline-flex, items-center (верт. центр), overflow-hidden, whitespace-nowrap, ml-2 для отступа
+                className="relative inline-flex overflow-hidden whitespace-nowrap text-accent font-semibold ml-4"
                 style={{
-                   height: '1.2em', // Высота контейнера (подбирается под размер шрифта H1, возможно нужна тонкая настройка)
-                   minWidth: '400px', // МИНИМАЛЬНАЯ ШИРИНА для самого длинного слова "Marketplace" на 6xl. Возможно, потребуется корректировка.
+                   height: '1.2em',
+                   minWidth: '400px',
+                   verticalAlign: 'baseline',
+                   transform: 'translateY(18px)'
                 }}
               >
                 <AnimatePresence mode="wait"> {/* AnimatePresence для плавного выхода предыдущего слова */}
@@ -154,16 +159,27 @@ export function HeroSection() {
                 </AnimatePresence>
               </span>
             </span>
-            {/* Вторая строка: "For Predictable Growth." - Принудительно на новую строку */}
+            {/* Вторая строка: "For [Image] Growth." - Принудительно на новую строку */}
             {/* Добавлен верхний отступ для корректного межстрочного расстояния */}
             <span className="block text-primary mt-4 md:mt-5 lg:mt-6"> {/* block для новой строки. mt-4/5/6 - верхний отступ, чтобы РАЗДВИНУТЬ строки */}
-              For Predictable Growth.
+              For{' '} {/* Статичный текст с пробелом */}
+              {/* Вставляем картинку вместо слова "Predictable" */}
+              <Image
+                src="/images/predictable.png" // <-- ЗАМЕНИ ЭТОТ ПУТЬ НА РЕАЛЬНОЕ ИМЯ ФАЙЛА
+                alt="Predictable" // <-- Добавь осмысленный alt текст
+                width={1024} // Исходная ширина картинки
+                height={1024} // Исходная высота картинки
+                className="inline-block align-middle h-[1.5em] w-auto" // Классы для размера и выравнивания. h-[1em] подбирает высоту под размер текста, w-auto сохраняет пропорции
+                // Возможно, потребуется тонкая настройка h-[1em] (например, h-[1.1em] или h-[0.9em]) для идеального совпадения с высотой текста.
+              />
+              {' '}Growth {/* Пробел перед "Growth." */}
             </span>
           </h1>
 
           {/* Подзаголовок (существующий код) - центрируем отдельно */}
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 md:mb-12 leading-relaxed text-center"> {/* Added text-center here */}
             TDI Group delivers predictable growth for SaaS, Apps, and Marketplaces globally: Strategy, Traffic, Community.
+            <br />
             We turn validated tech into revenue-generating businesses fast.
           </p>
 

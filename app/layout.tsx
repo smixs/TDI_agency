@@ -1,9 +1,14 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Space_Grotesk } from 'next/font/google';
 import { BackToTop } from '@/components/back-to-top';
 
-const inter = Inter({ subsets: ['latin'] });
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-space-grotesk',
+  weight: ['300', '400', '500', '600', '700'],
+});
 
 export const metadata: Metadata = {
   title: 'TDI Group - Digital Product Growth Strategies',
@@ -16,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark scroll-smooth">
-      <body className={inter.className}>
+    <html lang="en" className={`${spaceGrotesk.variable} dark scroll-smooth`}>
+      <body className={spaceGrotesk.className}>
         {children}
         <BackToTop />
       </body>
