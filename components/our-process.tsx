@@ -52,7 +52,7 @@ export function OurProcess() {
           >
             <div className={`relative mb-12 md:mb-16 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12 md:ml-auto'} md:w-1/2`}>
               {/* Step number bubble */}
-              <div className="absolute left-0 md:left-auto md:top-0 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-semibold z-10
+              <div className="absolute left-0 md:left-auto md:top-0 w-8 h-8 rounded-full bg-accent text-accent-foreground flex items-center justify-center font-semibold z-10
                             md:translate-x-[-50%]
                             md:translate-y-[-50%] 
                             md:w-12 md:h-12
@@ -67,7 +67,7 @@ export function OurProcess() {
               <div className="ml-12 md:ml-0 p-6 bg-muted/50 rounded-lg border border-border shadow-sm hover:shadow-md transition-shadow duration-300">
                 <div className="flex items-center gap-3 mb-3">
                   <div className="bg-primary/10 p-2 rounded-full">
-                    <step.icon className="h-5 w-5 text-primary" />
+                    <step.icon className="h-5 w-5 text-accent" />
                   </div>
                   <h3 className="text-xl font-semibold">{step.title}</h3>
                 </div>

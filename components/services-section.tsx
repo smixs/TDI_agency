@@ -12,6 +12,7 @@ import {
 import { ServicesGrid, ServiceData } from '@/components/services-grid';
 import { AnimateOnScroll } from '@/components/animate-on-scroll';
 import { ServiceCard } from '@/components/service-card';
+import { SectionTitle } from '@/components/section-title';
 
 export function ServicesSection() {
   const servicesData: ServiceData[] = [
@@ -55,9 +56,11 @@ export function ServicesSection() {
 
   return (
     <>
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
-        Our Arsenal for Your Ascent
-      </h2>
+      <AnimateOnScroll>
+        <SectionTitle accentColor="gradient">
+          Our Arsenal for Your Ascent
+        </SectionTitle>
+      </AnimateOnScroll>
       <ServicesGrid services={servicesData} />
     </>
   );

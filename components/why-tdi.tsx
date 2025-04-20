@@ -61,7 +61,7 @@ export function WhyTDI() {
             <div className="flex flex-col h-full hover:translate-y-[-4px] transition-transform duration-300 ease-in-out">
               <div className="flex gap-4 items-start mb-4">
                 <div className="bg-primary/10 p-3 rounded-xl">
-                  <advantage.icon className="h-5 w-5 text-primary" />
+                  <advantage.icon className="h-5 w-5 text-accent" />
                 </div>
                 <h3 className="text-xl font-semibold">{advantage.title}</h3>
               </div>

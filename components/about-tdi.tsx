@@ -14,8 +14,7 @@ export function AboutTDI() {
           <AnimateOnScroll delay={0.2}>
             <p className="text-lg text-muted-foreground text-center leading-relaxed">
               We are TDI Group, a specialized agency focused entirely on the
-              post-development journey of tech products. We don't just run ads; we build
-              ecosystems. We understand the nuances of SaaS retention, app adoption
+              post-development journey of tech products. We understand the nuances of SaaS retention, app adoption
               hooks, and marketplace network effects. Our team combines strategic
               insight, creative execution, and a relentless focus on driving engagement
               and measurable business outcomes.

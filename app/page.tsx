@@ -11,6 +11,7 @@ import { AnimateOnScroll } from '@/components/animate-on-scroll';
 import { WhyTDI } from '@/components/why-tdi';
 import { OurProcess } from '@/components/our-process';
 import { BackToTop } from '@/components/back-to-top';
+import { SectionTitle } from '@/components/section-title';
 
 export default function Home() {
   return (
@@ -45,18 +46,16 @@ export default function Home() {
       
       <section id="services" className="py-16 md:py-24 lg:py-32 bg-background">
         <div className="container mx-auto px-4">
-          <AnimateOnScroll>
-            <ServicesSection />
-          </AnimateOnScroll>
+          <ServicesSection />
         </div>
       </section>
       
       <section id="approach" className="py-16 md:py-24 lg:py-32 bg-muted/30">
         <div className="container mx-auto px-4">
           <AnimateOnScroll>
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+            <SectionTitle accentColor="accent">
               The TDI Difference
-            </h2>
+            </SectionTitle>
           </AnimateOnScroll>
           <AnimateOnScroll delay={0.2}>
             <WhyTDI />
@@ -67,9 +66,9 @@ export default function Home() {
       <section id="process" className="py-16 md:py-24 lg:py-32 bg-background">
         <div className="container mx-auto px-4">
           <AnimateOnScroll>
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+            <SectionTitle accentColor="primary">
               Your Growth Journey, Simplified
-            </h2>
+            </SectionTitle>
           </AnimateOnScroll>
           <AnimateOnScroll delay={0.2}>
             <OurProcess />

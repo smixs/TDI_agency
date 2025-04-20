@@ -11,6 +11,7 @@ import {
 } from '@/components/ui/card';
 import { Lightbulb, TrendingUp, Users } from 'lucide-react';
 import { AnimateOnScroll } from '@/components/animate-on-scroll';
+import { SectionTitle } from '@/components/section-title';
 
 interface CaseStudy {
   icon: React.ElementType;
@@ -48,9 +49,9 @@ export function ResultsSection() {
   return (
     <>
       <AnimateOnScroll>
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+        <SectionTitle accentColor="gradient">
           Turning Potential into Performance
-        </h2>
+        </SectionTitle>
       </AnimateOnScroll>
       
       <AnimateOnScroll delay={0.2}>
@@ -74,7 +75,7 @@ export function ResultsSection() {
               <CardHeader>
                 <div className="flex items-center space-x-3 mb-2">
                   <div className="bg-primary/10 p-2 rounded-full">
-                    <study.icon className="h-5 w-5 text-primary" />
+                    <study.icon className="h-5 w-5 text-accent" />
                   </div>
                   <CardTitle className="text-xl">{study.title}</CardTitle>
                 </div>

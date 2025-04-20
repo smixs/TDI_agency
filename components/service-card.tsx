@@ -21,7 +21,7 @@ export function ServiceCard({ icon: Icon, title, description, tags, className }:
       )}
     >
       <div className="p-3 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 mb-4 ring-1 ring-primary/10 self-start">
-        <Icon className="h-6 w-6 text-primary group-hover:text-primary group-hover:rotate-3 transition-all duration-300" />
+        <Icon className="h-6 w-6 text-accent group-hover:text-accent group-hover:rotate-3 transition-all duration-300" />
       </div>
       
       <h3 className="text-xl font-semibold mb-2 group-hover:text-primary/90 transition-colors duration-300">{title}</h3>
@@ -33,8 +33,8 @@ export function ServiceCard({ icon: Icon, title, description, tags, className }:
           {tags.map((tag, index) => (
             <Badge 
               key={index}
-              variant="secondary" 
-              className="text-xs bg-secondary/30 hover:bg-secondary/40"
+              variant="outline" 
+              className="text-xs border-primary/30 text-foreground bg-primary/10 hover:bg-primary/20 transition-colors"
             >
               {tag}
             </Badge>

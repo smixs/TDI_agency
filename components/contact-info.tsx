@@ -30,7 +30,7 @@ export function ContactInfo() {
             href={`mailto:${CONTACT_EMAIL}`}
             className="inline-flex items-center text-lg md:text-xl font-medium text-primary hover:text-primary/80 transition-colors group"
           >
-            <Mail className="w-5 h-5 md:w-6 md:h-6 mr-2 transition-transform group-hover:scale-110" />
+            <Mail className="w-5 h-5 md:w-6 md:h-6 mr-2 text-accent transition-transform group-hover:scale-110" />
             {CONTACT_EMAIL}
           </a>
         </AnimateOnScroll>
@@ -41,7 +41,7 @@ export function ContactInfo() {
             href={`tel:${CONTACT_PHONE}`}
             className="inline-flex items-center text-lg text-muted-foreground hover:text-primary/80 transition-colors group"
           >
-            <Phone className="w-5 h-5 mr-2 transition-transform group-hover:scale-110" />
+            <Phone className="w-5 h-5 mr-2 text-accent transition-transform group-hover:scale-110" />
             {CONTACT_PHONE}
           </a>
         )} */}
@@ -51,13 +51,13 @@ export function ContactInfo() {
           <div className="flex space-x-6 pt-4">
             {/* {LINKEDIN_URL && (
               <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                <Linkedin className="w-6 h-6" />
+                <Linkedin className="w-6 h-6 text-accent" />
                 <span className="sr-only">LinkedIn</span>
               </a>
             )}
             {TWITTER_URL && (
               <a href={TWITTER_URL} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                <Twitter className="w-6 h-6" />
+                <Twitter className="w-6 h-6 text-accent" />
                 <span className="sr-only">Twitter</span>
               </a>
             )} */}
