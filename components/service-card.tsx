@@ -29,7 +29,7 @@ export function ServiceCard({ icon: Icon, title, description, tags, className }:
       <PixelCanvas
         gap={12}
         speed={20}
-        colors={['hsl(var(--primary))', 'hsl(var(--accent))', 'hsl(var(--foreground))']}
+        colors={['hsl(var(--primary))', 'hsl(var(--accent))', 'hsl(var(--foreground))', 'hsl(var(--secondary-foreground))']}
         variant="default"
         noFocus={false}
       />

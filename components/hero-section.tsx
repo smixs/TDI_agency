@@ -5,12 +5,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import {
-  BrainCircuit,
-  MessageSquare,
   TrendingUp,
-  Video,
-  BarChart3,
-  Users
+  Target,
+  LineChart,
+  Clock,
+  Users,
+  BarChart3
 } from 'lucide-react';
 import { FeatureCard } from '@/components/feature-card';
 
@@ -18,7 +18,7 @@ export function HeroSection() {
   const [scrollY, setScrollY] = useState(0);
   const heroRef = useRef<HTMLDivElement>(null);
 
-  // Параллакс-эффект при скролле
+  // Parallax effect on scroll
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
@@ -30,34 +30,24 @@ export function HeroSection() {
 
   const features = [
     {
-      icon: BrainCircuit,
-      title: 'Strategic Brand Building',
-      description: 'Establish a memorable, distinctive presence in your market'
-    },
-    {
-      icon: MessageSquare,
-      title: 'Community Engagement',
-      description: 'Build vibrant communities around your product'
-    },
-    {
       icon: TrendingUp,
-      title: 'Growth Campaigns',
-      description: 'Data-driven acquisition and retention strategies'
+      title: '+300% Growth',
+      description: 'Average user growth in 6 months'
     },
     {
-      icon: Video,
-      title: 'Content Production',
-      description: 'Compelling content that showcases your value'
+      icon: Target,
+      title: '-42% CAC',
+      description: 'Reduced customer acquisition cost'
     },
     {
-      icon: BarChart3,
-      title: 'Marketing Roadmaps',
-      description: 'Strategic planning aligned with your business goals'
+      icon: LineChart,
+      title: 'Weekly Reports',
+      description: 'Transparent performance tracking'
     },
     {
-      icon: Users,
-      title: 'User Acquisition',
-      description: 'Targeted strategies to grow your user base efficiently'
+      icon: Clock,
+      title: '90 Days',
+      description: 'From strategy to market launch'
     },
   ];
 
@@ -66,7 +56,7 @@ export function HeroSection() {
       ref={heroRef}
       className="relative pt-28 pb-16 md:pt-40 lg:pt-48 md:pb-24 lg:pb-32 overflow-hidden"
     >
-      {/* Фоновые элементы с эффектом параллакса */}
+      {/* Background elements with parallax effect */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10" />
       
       <div 
@@ -111,18 +101,16 @@ export function HeroSection() {
       <div className="container mx-auto px-4 sm:px-6 relative">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 md:mb-6">
-            Your Digital Product is Ready.{' '}
-            <span className="text-primary">Let&apos;s Make the Market Ready for It.</span>
+            Launch Your SaaS for{' '}
+            <span className="text-primary">Predictable Growth.</span>
           </h1>
           
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 md:mb-12 leading-relaxed">
-            You&apos;ve built the core product. Now comes the critical part: winning users,
-            building a brand, and driving real engagement. TDI Group specializes in
-            crafting and executing powerful go-to-market strategies specifically for
-            SaaS, apps, and marketplaces.
+            TDI Group delivers predictable growth for SaaS, Apps, and Marketplaces globally: Strategy, Traffic, Community. 
+            We turn validated tech into revenue-generating businesses fast.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-12">
             {features.map((feature, index) => (
               <FeatureCard
                 key={index}
@@ -136,16 +124,16 @@ export function HeroSection() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-6">
             <Link href="#contact" className="w-full sm:w-auto">
               <Button size="lg" className="w-full text-base font-medium py-6 sm:py-5">
-                Get Growth Strategy
+                Get Your Growth Plan →
               </Button>
             </Link>
-            <Link href="#approach" className="w-full sm:w-auto">
+            <Link href="#contact" className="w-full sm:w-auto">
               <Button
                 variant="outline"
                 size="lg"
                 className="w-full text-base font-medium py-6 sm:py-5"
               >
-                See Our Approach
+                Book a Call →
               </Button>
             </Link>
           </div>

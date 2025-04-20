@@ -9,9 +9,8 @@ import { ContactInfo } from '@/components/contact-info';
 import { Footer } from '@/components/footer';
 import { AnimateOnScroll } from '@/components/animate-on-scroll';
 import { WhyTDI } from '@/components/why-tdi';
-import { OurProcess } from '@/components/our-process';
+import { CaseStudy } from '@/components/case-study';
 import { BackToTop } from '@/components/back-to-top';
-import { SectionTitle } from '@/components/section-title';
 
 export default function Home() {
   return (
@@ -54,39 +53,21 @@ export default function Home() {
       
       <section id="approach" className="py-16 md:py-24 lg:py-32 bg-muted/30">
         <div className="container mx-auto px-4">
-          <AnimateOnScroll>
-            <SectionTitle accentColor="accent">
-              The TDI Difference
-            </SectionTitle>
-          </AnimateOnScroll>
           <AnimateOnScroll delay={0.2}>
             <WhyTDI />
           </AnimateOnScroll>
         </div>
       </section>
       
-      <section id="process" className="py-16 md:py-24 lg:py-32 bg-background">
+      <section id="case-study" className="py-16 md:py-24 lg:py-32 bg-background">
         <div className="container mx-auto px-4">
-          <AnimateOnScroll>
-            <SectionTitle accentColor="primary">
-              Your Growth Journey, Simplified
-            </SectionTitle>
-          </AnimateOnScroll>
           <AnimateOnScroll delay={0.2}>
-            <OurProcess />
+            <CaseStudy />
           </AnimateOnScroll>
         </div>
       </section>
       
-      <section id="results" className="py-16 md:py-24 lg:py-32 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <AnimateOnScroll>
-            <ResultsSection />
-          </AnimateOnScroll>
-        </div>
-      </section>
-      
-      <section id="contact" className="py-16 md:py-24 lg:py-32 bg-background">
+      <section id="contact" className="py-16 md:py-24 lg:py-32 bg-muted/30">
         <div className="container mx-auto px-4">
           <AnimateOnScroll>
             <ContactInfo />
