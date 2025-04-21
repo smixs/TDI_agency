@@ -4,7 +4,7 @@
 
 import { useEffect, useState, useRef } from 'react';
 import Link from 'next/link';
-import Image from 'next/image'; // <-- Импортируем Image
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import {
@@ -13,7 +13,7 @@ import {
 } from 'lucide-react';
 
 // Массив типов продуктов для анимированной смены
-const PRODUCT_TYPES = ["Product", "Service", "Application", "Marketplace", "Platform"];
+const PRODUCT_TYPES = ["Startup", "SaaS", "Application", "Marketplace", "Platform", "Product", ];
 
 export function HeroSection() {
   const [scrollY, setScrollY] = useState(0);
@@ -53,13 +53,13 @@ export function HeroSection() {
       ref={heroRef}
       className="relative pt-28 pb-16 md:pt-40 lg:pt-48 md:pb-24 lg:pb-32 overflow-hidden"
     >
-      {/* Background elements with parallax effect (существующий код) */}
+      {/* Background elements with parallax effect - ВОССТАНОВЛЕНО */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10" />
 
       <div
         className="absolute inset-0 opacity-40"
         style={{
-          backgroundImage: `url('/images/hero-pattern.svg')`,
+          backgroundImage: `url('/images/hero-pattern.svg')`, // Убедись, что файл hero-pattern.svg существует по этому пути
           backgroundSize: '500px 500px',
           transform: `translateY(${scrollY * 0.1}px) scale(${1 + scrollY * 0.0003})`,
           transformOrigin: 'center',
@@ -68,6 +68,7 @@ export function HeroSection() {
         }}
       />
 
+      {/* Блюры - ОСТАВЛЕНЫ */}
       <div
         className="absolute top-32 -left-16 md:w-64 md:h-64 w-48 h-48 rounded-full bg-primary/15 blur-3xl"
         style={{
@@ -95,43 +96,46 @@ export function HeroSection() {
         }}
       />
 
-      {/* Основной контент - центрируем блок, но не текст внутри h1 */}
+      {/* Основной контент - центрируем блок, но текст h1 центрируется классом text-center */}
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
-        <div className="max-w-3xl mx-auto"> {/* Removed text-center here */}
-          {/* H1 - теперь выравнивает свой контент по левому краю */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 md:mb-6 leading-tight text-center"> {/* Added text-center here */}
-            {/* Первая строка: "Your [Animated Word]" - Используем flexbox для выравнивания элементов строки */}
-            <span className="inline-flex items-baseline text-white"> {/* inline-flex для строки, items-baseline для выравнивания текста */}
-              <span className="inline">Fuel Your{' '}</span> {/* Статичный текст. inline по умолчанию, пробел в конце */}
-              {/* Контейнер для динамического слова - flex item внутри inline-flex */}
-              {/* КРИТИЧНО: Точная высота, достаточная minWidth, overflow-hidden, выравнивание по левому краю внутри контейнера */}
+        <div className="max-w-3xl mx-auto">
+          {/* H1 - центрирует свои строчные/блочные элементы */}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 md:mb-6 leading-tight text-center">
+            {/* Первая строка: "Launch Your" - Обернута в span с display: block */}
+            <span className="block text-white">Launch Your</span>
+
+            {/* Вторая строка: [Animated Text] - Контейнер для динамического слова, обернут в span с display: block */}
+            {/* Добавлен небольшой верхний отступ (mt-2) для отделения от первой строки */}
+            {/* ДОБАВЛЕН text-center для центрирования inline-flex элемента внутри этого блока */}
+            <span className="block text-accent font-semibold mt-2 text-center">
+              {/* Внутренний контейнер для анимации - relative, inline-flex, overflow-hidden, minWidth, height */}
               <span
-                className="relative inline-flex overflow-hidden whitespace-nowrap text-accent font-semibold ml-4"
+                className="relative inline-flex overflow-hidden whitespace-nowrap items-center justify-center" 
                 style={{
-                   height: '1.2em',
-                   minWidth: '400px',
-                   verticalAlign: 'baseline',
-                   transform: 'translateY(18px)'
+                   height: '1.2em', // Высота контейнера анимации, подбери под размер шрифта
+                   minWidth: '400px', // Минимальная ширина, чтобы самое длинное слово не обрезалось
+                   verticalAlign: 'baseline', // Важно для выравнивания в строке, хотя тут строка одна
                 }}
               >
-                <AnimatePresence mode="wait"> {/* AnimatePresence для плавного выхода предыдущего слова */}
+                <AnimatePresence mode="wait">
                   <motion.span
-                    key={PRODUCT_TYPES[wordIndex]} // Ключ для анимации смены элемента
-                    className="absolute inset-0 flex items-center justify-start" // Абсолютное позиционирование, items-center (верт. центр), justify-start (ВЫРАВНИВАНИЕ ПО ЛЕВОМУ КРАЮ)
-                    initial={{ opacity: 0, y: "100%" }} // Начальное состояние (снизу, невидимо)
-                    animate={{ opacity: 1, y: "0%" }} // Активное состояние (в центре, видимо)
-                    exit={{ opacity: 0, y: "-100%" }} // Состояние выхода (уходит вверх, невидимо)
-                    transition={{ type: "spring", stiffness: 50, damping: 15 }} // Анимация
+                    key={PRODUCT_TYPES[wordIndex]}
+                    className="absolute inset-0 flex items-center justify-center" // items-center (верт. центр), justify-start (ВЫРАВНИВАНИЕ ПО ЛЕВОМУ КРАЮ ВНУТРИ КОНТЕЙНЕРА)
+                    initial={{ opacity: 0, y: "100%" }}
+                    animate={{ opacity: 1, y: "0%" }}
+                    exit={{ opacity: 0, y: "-100%" }}
+                    transition={{ type: "spring", stiffness: 50, damping: 15 }}
                   >
                     {PRODUCT_TYPES[wordIndex]}
                   </motion.span>
                 </AnimatePresence>
               </span>
             </span>
-            {/* Вторая строка: "For [Image] Growth." - Принудительно на новую строку */}
-            {/* Добавлен верхний отступ для корректного межстрочного расстояния */}
-            <span className="block text-primary mt-4 md:mt-5 lg:mt-6"> {/* block для новой строки. mt-4/5/6 - верхний отступ, чтобы РАЗДВИНУТЬ строки */}
-              For{' '} {/* Статичный текст с пробелом */}
+
+            {/* Третья строка: "For [Image] Growth" - Обернута в span с display: block */}
+            {/* Добавлен верхний отступ (mt-2) для отделения от второй строки */}
+            <span className="block text-primary mt-2">
+              For{' '}
               {/* Вставляем картинку вместо слова "Predictable" */}
               <Image
                 src="/images/predictable.png" // <-- ЗАМЕНИ ЭТОТ ПУТЬ НА РЕАЛЬНОЕ ИМЯ ФАЙЛА
@@ -139,37 +143,42 @@ export function HeroSection() {
                 width={1024} // Исходная ширина картинки
                 height={1024} // Исходная высота картинки
                 className="inline-block align-middle h-[1.5em] w-auto" // Классы для размера и выравнивания. h-[1em] подбирает высоту под размер текста, w-auto сохраняет пропорции
-                // Возможно, потребуется тонкая настройка h-[1em] (например, h-[1.1em] или h-[0.9em]) для идеального совпадения с высотой текста.
+                // Возможно, потребуется тонкая настройка h-[1.5em] (например, h-[1.6em] или h-[1.4em]) для идеального совпадения с высотой текста.
               />
-              {' '}Growth {/* Пробел перед "Growth." */}
+              {' '}Growth
             </span>
           </h1>
 
-          {/* Подзаголовок (существующий код) - центрируем отдельно */}
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 md:mb-12 leading-relaxed text-center"> {/* Added text-center here */}
-            TDI Group delivers predictable growth for SaaS, Apps, and Marketplaces globally: Strategy, Traffic, Community.
+          {/* Подзаголовок с выделенными фразами */}
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 md:mb-12 leading-relaxed text-center">
+            <span className="text-primary font-medium">Your Digital Product is Ready.</span>{' '}
+            <span className="text-accent">Let&apos;s Make the Market Ready for It.</span>
             <br />
-            We turn validated tech into revenue-generating businesses fast.
+            <span className="text-foreground/80">
+              We build the{' '}
+              <span className="text-primary font-medium">brand</span>,{' '}
+              <span className="text-primary font-medium">community</span>, and{' '}
+              <span className="text-primary font-medium">go-to-market engine</span>{' '}
+              around it.
+            </span>
           </p>
 
           {/* Кнопки CTA (существующий код, адаптируем текст и иконки) - центрируем контейнер */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-6"> {/* justify-center centers buttons */}
-            {/* Кнопка "Get Your Growth Plan" */}
-            {/* Ссылка пока ведет на #contact, как было. Позже можно заменить на модалку/форму */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-6">
+            {/* Кнопка "Get Your Growth Plan" - ведет на #contact */}
             <Link href="#contact" className="w-full sm:w-auto">
-              <Button size="lg" className="w-full text-base font-medium py-6 sm:py-5 gap-2"> {/* Добавлен gap-2 для иконки */}
-                Get Your Growth Plan <MoveRight className="ml-1 h-4 w-4" /> {/* Добавлена иконка */}
+              <Button size="lg" className="w-full text-base font-medium py-6 sm:py-5 gap-2">
+                Get Your Growth Plan <MoveRight className="ml-1 h-4 w-4" />
               </Button>
             </Link>
-            {/* Кнопка "Book a Call" */}
-            {/* Ссылка пока ведет на #contact. Позже можно заменить на Calendly */}
+            {/* Кнопка "Book a Call" - ведет на #contact */}
             <Link href="#contact" className="w-full sm:w-auto">
               <Button
                 variant="outline"
                 size="lg"
-                className="w-full text-base font-medium py-6 sm:py-5 gap-2" // Добавлен gap-2 для иконки
+                className="w-full text-base font-medium py-6 sm:py-5 gap-2"
               >
-                Book a Call <PhoneCall className="ml-1 h-4 w-4" /> {/* Добавлена иконка */}
+                Book a Call <PhoneCall className="ml-1 h-4 w-4" />
               </Button>
             </Link>
           </div>
