@@ -15,7 +15,7 @@ export function Footer() {
             <Link href="/" className="flex items-center space-x-2 mb-2 group">
               {/* Используем тот же логотип, что и в Header */}
               <Image 
-                src="/images/tdi-logo.svg" 
+                src="/images/tdi-logo.png" 
                 alt="TDI Group Logo" 
                 width={40} 
                 height={40}

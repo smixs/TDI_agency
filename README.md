@@ -7,8 +7,10 @@ TDI_agency
 │  ├─ build-manifest.json
 │  ├─ cache
 │  │  ├─ images
-│  │  │  └─ JT7ZAHKNDy8VOtIkhMVJOZKwi507XVQhc0sLsA0cMcM=
-│  │  │     └─ 60.1745214469397.FGlY65yNwP+9U4Ah9Hz3ABOi8CP4pMNFZi+8ZVgBo+M=.webp
+│  │  │  ├─ JT7ZAHKNDy8VOtIkhMVJOZKwi507XVQhc0sLsA0cMcM=
+│  │  │  │  └─ 60.1745215596834.FGlY65yNwP+9U4Ah9Hz3ABOi8CP4pMNFZi+8ZVgBo+M=.webp
+│  │  │  └─ uL0mSznH9OYBY22HwvIx6IvWOLYXelEXM8zat5hGQBE=
+│  │  │     └─ 60.1745215596748.PuuBhdFu03uxyIEcQiGcD3wN7R0sHn55tlLBszUjHrs=.webp
 │  │  ├─ swc
 │  │  │  └─ plugins
 │  │  │     └─ v7_macos_aarch64_0.102.1
@@ -26,17 +28,13 @@ TDI_agency
 │  │     └─ server-development
 │  │        ├─ 0.pack.gz
 │  │        ├─ 1.pack.gz
+│  │        ├─ 2.pack.gz
 │  │        └─ index.pack.gz.old
-│  ├─ fallback-build-manifest.json
 │  ├─ package.json
 │  ├─ react-loadable-manifest.json
 │  ├─ server
-│  │  ├─ _error.js
 │  │  ├─ _ssr_components_ui_pixel-canvas_tsx.js
 │  │  ├─ app
-│  │  │  ├─ _not-found_client-reference-manifest.js
-│  │  │  ├─ not-found.js
-│  │  │  ├─ not-found_client-reference-manifest.js
 │  │  │  ├─ page.js
 │  │  │  └─ page_client-reference-manifest.js
 │  │  ├─ app-paths-manifest.json
@@ -45,10 +43,6 @@ TDI_agency
 │  │  ├─ middleware-react-loadable-manifest.js
 │  │  ├─ next-font-manifest.js
 │  │  ├─ next-font-manifest.json
-│  │  ├─ pages
-│  │  │  ├─ _app.js
-│  │  │  ├─ _document.js
-│  │  │  └─ _error.js
 │  │  ├─ pages-manifest.json
 │  │  ├─ server-reference-manifest.js
 │  │  ├─ server-reference-manifest.json
@@ -92,27 +86,12 @@ TDI_agency
 │  ├─ static
 │  │  ├─ chunks
 │  │  │  ├─ _app-pages-browser_components_ui_pixel-canvas_tsx.js
-│  │  │  ├─ _error.js
 │  │  │  ├─ app
 │  │  │  │  ├─ layout.js
-│  │  │  │  ├─ not-found.js
 │  │  │  │  └─ page.js
 │  │  │  ├─ app-pages-internals.js
-│  │  │  ├─ fallback
-│  │  │  │  ├─ amp.js
-│  │  │  │  ├─ main.js
-│  │  │  │  ├─ pages
-│  │  │  │  │  ├─ _app.js
-│  │  │  │  │  └─ _error.js
-│  │  │  │  ├─ react-refresh.js
-│  │  │  │  └─ webpack.js
 │  │  │  ├─ main-app.js
-│  │  │  ├─ main.js
-│  │  │  ├─ pages
-│  │  │  │  ├─ _app.js
-│  │  │  │  └─ _error.js
 │  │  │  ├─ polyfills.js
-│  │  │  ├─ react-refresh.js
 │  │  │  └─ webpack.js
 │  │  ├─ css
 │  │  │  └─ app
@@ -125,41 +104,11 @@ TDI_agency
 │  │  │  ├─ b7387a63dd068245-s.woff2
 │  │  │  └─ e1aab0933260df4d-s.woff2
 │  │  └─ webpack
-│  │     ├─ 066471741387a577.webpack.hot-update.json
-│  │     ├─ 0e1eb70e35c74b68.webpack.hot-update.json
-│  │     ├─ 1251ed9869946e49.webpack.hot-update.json
-│  │     ├─ 1828d4ac94a86504.webpack.hot-update.json
-│  │     ├─ 255eaffaad003a14.webpack.hot-update.json
-│  │     ├─ 2d8a790afc1690c7.webpack.hot-update.json
-│  │     ├─ 305ac9da8cfd4736.webpack.hot-update.json
-│  │     ├─ 3b3e43836db0c35a.webpack.hot-update.json
-│  │     ├─ 3fe797b9b4d34d81.webpack.hot-update.json
 │  │     ├─ 633457081244afec._.hot-update.json
-│  │     ├─ 9a5610224da995b6.webpack.hot-update.json
+│  │     ├─ 873a8d88e589dc19.webpack.hot-update.json
 │  │     ├─ app
-│  │     │  ├─ layout.0e1eb70e35c74b68.hot-update.js
-│  │     │  ├─ layout.1251ed9869946e49.hot-update.js
-│  │     │  ├─ layout.2d8a790afc1690c7.hot-update.js
-│  │     │  ├─ layout.305ac9da8cfd4736.hot-update.js
-│  │     │  ├─ layout.3b3e43836db0c35a.hot-update.js
-│  │     │  ├─ layout.3fe797b9b4d34d81.hot-update.js
-│  │     │  ├─ layout.9a5610224da995b6.hot-update.js
-│  │     │  ├─ page.0e1eb70e35c74b68.hot-update.js
-│  │     │  ├─ page.1828d4ac94a86504.hot-update.js
-│  │     │  ├─ page.2d8a790afc1690c7.hot-update.js
-│  │     │  ├─ page.3b3e43836db0c35a.hot-update.js
-│  │     │  ├─ page.3fe797b9b4d34d81.hot-update.js
-│  │     │  └─ page.9a5610224da995b6.hot-update.js
-│  │     ├─ webpack.066471741387a577.hot-update.js
-│  │     ├─ webpack.0e1eb70e35c74b68.hot-update.js
-│  │     ├─ webpack.1251ed9869946e49.hot-update.js
-│  │     ├─ webpack.1828d4ac94a86504.hot-update.js
-│  │     ├─ webpack.255eaffaad003a14.hot-update.js
-│  │     ├─ webpack.2d8a790afc1690c7.hot-update.js
-│  │     ├─ webpack.305ac9da8cfd4736.hot-update.js
-│  │     ├─ webpack.3b3e43836db0c35a.hot-update.js
-│  │     ├─ webpack.3fe797b9b4d34d81.hot-update.js
-│  │     └─ webpack.9a5610224da995b6.hot-update.js
+│  │     │  └─ layout.873a8d88e589dc19.hot-update.js
+│  │     └─ webpack.873a8d88e589dc19.hot-update.js
 │  ├─ trace
 │  └─ types
 │     ├─ app
@@ -196,7 +145,6 @@ TDI_agency
 │  ├─ header.tsx
 │  ├─ hero-geometric.tsx
 │  ├─ hero-section.tsx
-│  ├─ market-challenge.tsx
 │  ├─ results-section.tsx
 │  ├─ section-title.tsx
 │  ├─ service-card.tsx
@@ -240,7 +188,6 @@ TDI_agency
 │  │  ├─ select.tsx
 │  │  ├─ separator.tsx
 │  │  ├─ sheet.tsx
-│  │  ├─ simple-lamp-effect.tsx
 │  │  ├─ skeleton.tsx
 │  │  ├─ slider.tsx
 │  │  ├─ sonner.tsx
@@ -272,9 +219,12 @@ TDI_agency
 │  │  │  ├─ dropbox-logo.svg
 │  │  │  ├─ shopify-logo.svg
 │  │  │  └─ slack-logo.svg
+│  │  ├─ favicon.png
 │  │  ├─ growth.png
 │  │  ├─ hero-pattern.svg
 │  │  ├─ predictable.png
+│  │  ├─ social-share-image.png
+│  │  ├─ tdi-logo.png
 │  │  └─ tdi-logo.svg
 │  ├─ robots.txt
 │  └─ sitemap.xml

@@ -38,7 +38,7 @@ export function Header() {
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
           <Image 
-            src="/images/tdi-logo.svg" 
+            src="/images/tdi-logo.png" 
             alt="TDI Group Logo" 
             width={40} 
             height={40}
