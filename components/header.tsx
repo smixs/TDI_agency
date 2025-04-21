@@ -59,13 +59,13 @@ export function Header() {
             className="text-sm font-medium hover:text-primary/80 transition-colors"
           >
             Approach
-          </Link>
+          {/* </Link>
           <Link
             href="#results"
             className="text-sm font-medium hover:text-primary/80 transition-colors"
           >
-            Results
-          </Link>
+            Results*/}
+          </Link> 
           <Link
             href="#contact"
             className="text-sm font-medium hover:text-primary/80 transition-colors"
